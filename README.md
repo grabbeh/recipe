@@ -1,69 +1,87 @@
-# Getting Started with Remix
+# Welcome to React Router!
 
-This guide will walk you through the process of creating a new Remix application.
+A modern, production-ready template for building full-stack React applications using React Router.
 
-## Prerequisites
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-Before you begin, make sure you have the following installed on your system:
+## Features
 
-- Node.js (v14 or later)
-- npm, yarn, pnpm, or bun
+- 🚀 Server-side rendering
+- ⚡️ Hot Module Replacement (HMR)
+- 📦 Asset bundling and optimization
+- 🔄 Data loading and mutations
+- 🔒 TypeScript by default
+- 🎉 TailwindCSS for styling
+- 📖 [React Router docs](https://reactrouter.com/)
 
-## Creating a New Remix App
+## Getting Started
 
-The easiest way to start a new Remix project is by using the `create-remix` command-line interface (CLI).
+### Installation
 
-You can run the following command in your terminal:
-
-```bash
-npx create-remix@latest
-```
-
-This command will prompt you with a few questions to configure your new project, such as the project name and which template to use.
-
-### Using a Specific Template
-
-If you want to use a specific template, you can use the `--template` flag. For example, to create a new project using the official "indie-stack" template, you would run:
+Install the dependencies:
 
 ```bash
-npx create-remix@latest --template remix-run/indie-stack
+npm install
 ```
 
-### Specifying a Project Directory
+### Development
 
-You can also specify the directory where you want to create the project:
-
-```bash
-npx create-remix@latest ./my-remix-app
-```
-
-## Available Package Managers
-
-You can use your preferred package manager to create a new Remix app:
-
-- **npm:** `npm create remix@latest`
-- **Yarn:** `yarn create remix@latest`
-- **pnpm:** `pnpm create remix@latest`
-- **Bun:** `bunx create-remix@latest`
-
-## Running the Development Server
-
-Once your project is created, navigate to the project directory:
-
-```bash
-cd my-remix-app
-```
-
-Then, you can start the development server:
+Start the development server with HMR:
 
 ```bash
 npm run dev
 ```
 
-This will start the development server, and you can view your new Remix app by opening your browser to `http://localhost:3000`.
+Your application will be available at `http://localhost:5173`.
 
-## Additional Resources
+## Building for Production
 
-- [Remix Quick Start Guide](https://remix.run/docs/en/main/start/quickstart)
-- [create-remix CLI Documentation](https://remix.run/docs/en/main/other-api/create-remix)
-- [Remix Templates](https://remix.run/docs/en/main/guides/templates)
+Create a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+### Docker Deployment
+
+To build and run using Docker:
+
+```bash
+docker build -t my-app .
+
+# Run the container
+docker run -p 3000:3000 my-app
+```
+
+The containerized application can be deployed to any platform that supports Docker, including:
+
+- AWS ECS
+- Google Cloud Run
+- Azure Container Apps
+- Digital Ocean App Platform
+- Fly.io
+- Railway
+
+### DIY Deployment
+
+If you're familiar with deploying Node applications, the built-in app server is production-ready.
+
+Make sure to deploy the output of `npm run build`
+
+```
+├── package.json
+├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
+├── build/
+│   ├── client/    # Static assets
+│   └── server/    # Server-side code
+```
+
+## Styling
+
+This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+
+---
+
+Built with ❤️ using React Router.
